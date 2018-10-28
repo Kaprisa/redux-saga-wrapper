@@ -1,0 +1,31 @@
+{
+  "name": "redux-saga-wrapper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Kseniya <kaprisa57@gmail.com>",
+  "repository": "github:Kaprisa/redux-saga-wrapper",
+  "scripts": {
+    "lint": "eslint ./**/*.js",
+    "lint:fix": "eslint --fix ./**/*.js"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "saga"
+  ],
+  "dependencies": {
+    "axios": "^0.18.0",
+    "history": "^4.7.2",
+    "ramda": "^0.25.0",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.16.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}

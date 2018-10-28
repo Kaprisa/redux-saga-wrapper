@@ -1,0 +1,11 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "func-names": "off",
+    "import/no-cycle": "off",
+    "consistent-return": "off"
+  },
+  "env": {
+    "browser": true
+  }
+}
