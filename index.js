@@ -1,7 +1,7 @@
 import { all } from 'redux-saga/effects';
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import logger from 'redux-logger';
-import { routerMiddleware, routerReducer as router } from 'react-router-redux';
+import { routerMiddleware, connectRouter } from 'connected-react-router'
 import createSagaMiddleware from 'redux-saga';
 import { history } from './modules';
 
@@ -18,7 +18,10 @@ export default class ReduxWrapper {
 
   constructor(reducers, sagas) {
 
-    this.store = createStore(combineReducers({router, ...reducers}), enhancer);
+    this.store = createStore(combineReducers({
+        router: connectRouter(history),
+        ...reducers
+    }), enhancer);
 
     sagaMiddleware.run(function* rootSaga() {
       yield all(sagas.map(s => s()));
